@@ -17,7 +17,7 @@ I'm Blaze. I keep systems boring on purpose: backups that actually restore, depl
 | Automation & CI | n8n, MCP, cron, systemd, Dagu, GitHub Actions, GoReleaser, Forgejo |
 | AI tooling | Claude Code, OpenCode, NanoClaw (agent harness), n8n AI agents, MCP servers and tools, OpenRouter, Open WebUI |
 | Data | PostgreSQL, SQLite, Redis/Valkey, MariaDB, Alembic migrations |
-| Languages | Go, Python, PowerShell 7, Kotlin, TypeScript, Bash, SQL |
+| Languages | Python, PowerShell 7, Bash, SQL |
 | Microsoft 365 | Graph API (app-only auth), Exchange Online, Teams, SharePoint, Intune |
 | Google | Workspace Admin, Vault, domain-wide delegation |
 | Commerce & ERP | Shopify Admin GraphQL, Amazon SP-API, NetSuite SuiteQL |
