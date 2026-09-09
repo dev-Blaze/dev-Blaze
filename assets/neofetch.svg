@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="880" height="470" viewBox="0 0 880 470" role="img" aria-label="neofetch-style profile card for dev-Blaze">
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="452" viewBox="0 0 880 452" role="img" aria-label="neofetch-style profile card for dev-Blaze">
 <style>
   text { font-family: SFMono-Regular, Menlo, Consolas, 'Liberation Mono', 'DejaVu Sans Mono', monospace; font-size: 13px; fill: #f8f8f2; white-space: pre; }
   .k { fill: #f4d858; }
@@ -9,7 +9,7 @@
   @keyframes reveal { to { opacity: 1; } }
   @media (prefers-reduced-motion: reduce) { .in { opacity: 1; animation: none; } .cur { animation: none; } }
 </style>
-<rect x="0.5" y="0.5" width="879" height="469" rx="12" fill="#2b3e50" stroke="#1c2a37"/>
+<rect x="0.5" y="0.5" width="879" height="451" rx="12" fill="#2b3e50" stroke="#1c2a37"/>
 <path d="M12.5 0.5h855a12 12 0 0 1 12 12v27.5H0.5V12.5a12 12 0 0 1 12-12z" fill="#233444"/>
 <circle cx="22" cy="20" r="6" fill="#ff5f57"/>
 <circle cx="42" cy="20" r="6" fill="#febc2e"/>
@@ -38,22 +38,21 @@
 <text x="330" y="164" class="in" style="animation-delay:0.30s"><tspan class="k">Kernel</tspan>: DevOps / SRE / IT systems</text>
 <text x="330" y="182" class="in" style="animation-delay:0.35s"><tspan class="k">Uptime</tspan>: measured in cron runs, not days</text>
 <text x="330" y="200" class="in" style="animation-delay:0.40s"><tspan class="k">Packages</tspan>: 80+ (docker compose)</text>
-<text x="330" y="218" class="in" style="animation-delay:0.45s"><tspan class="k">Shell</tspan>: zsh 5.9, pwsh 7</text>
+<text x="330" y="218" class="in" style="animation-delay:0.45s"><tspan class="k">Shell</tspan>: zsh, pwsh 7</text>
 <text x="330" y="236" class="in" style="animation-delay:0.50s"><tspan class="k">Resolution</tspan>: 2 sites + cloud, 1 WireGuard mesh</text>
 <text x="330" y="254" class="in" style="animation-delay:0.55s"><tspan class="k">DE</tspan>: Docker Compose</text>
 <text x="330" y="272" class="in" style="animation-delay:0.60s"><tspan class="k">WM</tspan>: Pangolin + Newt (zero published ports)</text>
 <text x="330" y="290" class="in" style="animation-delay:0.65s"><tspan class="k">WM Theme</tspan>: Lucario</text>
-<text x="330" y="308" class="in" style="animation-delay:0.70s"><tspan class="k">Terminal</tspan>: Go TUIs (Bubble Tea)</text>
-<text x="330" y="326" class="in" style="animation-delay:0.75s"><tspan class="k">CPU</tspan>: Go, Python, PowerShell, Kotlin</text>
-<text x="330" y="344" class="in" style="animation-delay:0.80s"><tspan class="k">GPU</tspan>: n8n agents with MCP tools</text>
-<text x="330" y="362" class="in" style="animation-delay:0.85s"><tspan class="k">Memory</tspan>: restic to NAS nightly, n8n workflows to git</text>
-<rect x="330" y="390" width="42" height="24" fill="#252d38" class="in" style="animation-delay:1.00s"/>
-<rect x="372" y="390" width="42" height="24" fill="#d85740" class="in" style="animation-delay:1.05s"/>
-<rect x="414" y="390" width="42" height="24" fill="#67af5e" class="in" style="animation-delay:1.10s"/>
-<rect x="456" y="390" width="42" height="24" fill="#f4d858" class="in" style="animation-delay:1.15s"/>
-<rect x="498" y="390" width="42" height="24" fill="#6a97c9" class="in" style="animation-delay:1.20s"/>
-<rect x="540" y="390" width="42" height="24" fill="#c296f9" class="in" style="animation-delay:1.25s"/>
-<rect x="582" y="390" width="42" height="24" fill="#9fdefa" class="in" style="animation-delay:1.30s"/>
-<rect x="624" y="390" width="42" height="24" fill="#f8f8f2" class="in" style="animation-delay:1.35s"/>
-<text x="44" y="442" class="in" style="animation-delay:1.5s"><tspan fill="#67af5e">~</tspan> <tspan fill="#c296f9">❯</tspan> <tspan class="cur">▍</tspan></text>
+<text x="330" y="308" class="in" style="animation-delay:0.70s"><tspan class="k">CPU</tspan>: Python, PowerShell, Bash</text>
+<text x="330" y="326" class="in" style="animation-delay:0.75s"><tspan class="k">GPU</tspan>: n8n agents with MCP tools</text>
+<text x="330" y="344" class="in" style="animation-delay:0.80s"><tspan class="k">Memory</tspan>: restic to NAS and S3, nightly</text>
+<rect x="330" y="372" width="42" height="24" fill="#252d38" class="in" style="animation-delay:1.00s"/>
+<rect x="372" y="372" width="42" height="24" fill="#d85740" class="in" style="animation-delay:1.05s"/>
+<rect x="414" y="372" width="42" height="24" fill="#67af5e" class="in" style="animation-delay:1.10s"/>
+<rect x="456" y="372" width="42" height="24" fill="#f4d858" class="in" style="animation-delay:1.15s"/>
+<rect x="498" y="372" width="42" height="24" fill="#6a97c9" class="in" style="animation-delay:1.20s"/>
+<rect x="540" y="372" width="42" height="24" fill="#c296f9" class="in" style="animation-delay:1.25s"/>
+<rect x="582" y="372" width="42" height="24" fill="#9fdefa" class="in" style="animation-delay:1.30s"/>
+<rect x="624" y="372" width="42" height="24" fill="#f8f8f2" class="in" style="animation-delay:1.35s"/>
+<text x="44" y="424" class="in" style="animation-delay:1.5s"><tspan fill="#67af5e">~</tspan> <tspan fill="#c296f9">❯</tspan> <tspan class="cur">▍</tspan></text>
 </svg>
