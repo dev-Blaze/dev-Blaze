@@ -9,11 +9,11 @@ I'm Blaze. I keep systems boring on purpose: backups that actually restore, depl
 | | |
 | --- | --- |
 | Networking | WireGuard, NetBird mesh, Pangolin + Newt (reverse proxy and tunnels, zero published ports), Cloudflare DNS and DDNS, SMB/CIFS |
-| Identity & access | OIDC, SAML, Pocket ID, Authlib, Microsoft Entra ID, JumpCloud, RBAC with audit logs, MFA/TOTP, FIDO2, age encryption, Android Keystore |
+| Identity & security | OIDC, SAML, Pocket ID, Authlib, Microsoft Entra ID, JumpCloud, SentinelOne, RBAC with audit logs, MFA/TOTP, FIDO2, age encryption, Android Keystore |
 | Backups & storage | restic, Backrest, S3 and Backblaze B2, ZFS on TrueNAS, nightly database dumps, config-as-code in git, written restore runbooks |
 | Containers | Docker, Compose, buildx multi-arch, GHCR, Watchtower, Portainer-style stack envs, non-root images with healthchecks |
 | Platforms | Proxmox VE, TrueNAS SCALE, Ubuntu Server, Windows Server, Hetzner and RackNerd VPS |
-| Observability | Beszel, CheckCle, Uptime Kuma, `/proc` resource sampling, webhook run reporting, Slack and SMTP alerting |
+| Observability & alerting | Zabbix, Beszel, CheckCle, Uptime Kuma, `/proc` resource sampling, webhook run notifications, Gotify, ntfy, Slack and SMTP alerting |
 | Automation & CI | n8n, MCP, cron, systemd, Dagu, GitHub Actions, GoReleaser, Forgejo |
 | AI tooling | n8n AI agents, MCP servers and tools, OpenRouter, Open WebUI |
 | Data | PostgreSQL, SQLite, Redis/Valkey, MariaDB, Alembic migrations |
