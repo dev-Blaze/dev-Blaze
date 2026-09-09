@@ -19,7 +19,7 @@ I'm Blaze. I keep systems boring on purpose: backups that actually restore, depl
 | Data | PostgreSQL, SQLite, Redis/Valkey, MariaDB, Alembic migrations |
 | Languages | Python, PowerShell 7, Bash, SQL |
 | Microsoft 365 & Google Workspace | Graph API, Exchange Online, Teams, SharePoint, Intune; Google Workspace Admin, Vault |
-| Commerce & ERP | Shopify Admin GraphQL, Amazon SP-API, NetSuite SuiteQL |
+| Commerce & ERP | Shopify Admin GraphQL, Admin REST, and Storefront APIs; Amazon Seller Central SP-API and MWS; Salesforce REST, SOAP, and Bulk APIs; NetSuite SuiteQL and SuiteTalk REST |
 
 ## What I do
 
