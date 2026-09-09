@@ -6,7 +6,7 @@ I'm Blaze. I keep systems boring on purpose: backups that actually restore, depl
 
 ## What I run
 
-Two sites plus a VPS, joined by a WireGuard mesh, with nothing listening on a public port. Everything is declarative Docker Compose, one directory per stack, prefixed by host.
+Two sites plus a VPS, joined by a WireGuard mesh, with nothing listening on a public port. Everything is declarative Docker Compose, one directory per stack, prefixed by host, versioned in git.
 
 | Concern | How it's handled |
 | --- | --- |
@@ -14,39 +14,41 @@ Two sites plus a VPS, joined by a WireGuard mesh, with nothing listening on a pu
 | Network | NetBird (WireGuard) mesh between home, the VPS, and work sites. Gluetun VPN-gates the download stack. |
 | Identity | Pocket ID as the OIDC provider. One login for every app that supports it. |
 | Observability | Beszel hub + agents (including a GPU agent), CheckCle, Uptime Kuma. |
-| Backups | Backrest (restic) to a NAS over SMB. n8n workflows exported to git nightly, with a written restore runbook. |
+| Backups | Backrest (restic) to a NAS over SMB. Automation workflows exported to git nightly, with a written restore runbook. |
 | Updates | Watchtower per host on a 02:00 cron, email on change. |
-| Scheduling | Dagu for DAG jobs. Scriptorium for script cron with locks, timeouts, and missed-run detection. |
+| Scheduling | Dagu for DAG jobs. A self-built script runner for cron with locks, timeouts, and missed-run detection. |
 | Automation | Four n8n instances (two personal, two work) running AI agents that call MCP tools. |
-| Apps | Immich, Paperless-ngx, Jellyfin + the \*arr stack, Vaultwarden, Outline, Forgejo, Open WebUI, Mealie, Audiobookshelf, and game servers (Crafty, Foundry VTT, AzerothCore). |
+| Apps | Immich, Paperless-ngx, Jellyfin + the \*arr stack, Vaultwarden, Outline, Forgejo, Open WebUI, Mealie, Audiobookshelf, and a few game servers. |
 
 Hypervisor is Proxmox VE with TrueNAS SCALE and Ubuntu Server guests.
 
-## Things I've built
+## What I do
 
-- **[Scriptorium](https://github.com/yshah-aromatech/scriptorium)** — a single-binary Go TUI that runs PowerShell and Python scripts on a server. Per-script venvs and module dirs, cron in a managed crontab block, per-script locks and timeouts, CPU/RSS sampling from `/proc`, secret redaction, n8n webhook reporting with an on-disk retry queue, an MCP + REST server behind a bearer token, systemd install, GoReleaser releases, and a `curl | bash` installer that doubles as the updater.
-- **[clavis](https://github.com/armtch-dev/clavis)** — SSH connection manager TUI with an age-encrypted vault, 15 s reachability probes with latency sparklines, Touch ID or FIDO2 unlock, and guarded encrypted git sync that refuses to push plaintext.
-- **[asset-manager](https://github.com/armtch-dev/asset-manager)** — self-hosted IT asset management: lifecycle, assignments, licences, QR labels. FastAPI, multi-stage Dockerfile, non-root, healthcheck, multi-arch GHCR image, JumpCloud and Intune sync, TOTP.
-- **[alfred](https://github.com/dev-Blaze/alfred)** + **[alfred-companion](https://github.com/dev-Blaze/alfred-companion)** — Android and Wear OS voice assistant that replaces the system assistant and talks to a self-hosted n8n AI agent. Kotlin, Jetpack Compose, credentials encrypted with the Android Keystore.
-- **[azerothcore-docker](https://github.com/dev-Blaze/azerothcore-docker)** — AzerothCore with Playerbots and MySQL in one container, prebuilt on GHCR.
-- **[homepage](https://github.com/dev-Blaze/homepage)** — fork of gethomepage/homepage with a Yahoo Finance widget (quote-only proxy, unit test) and my own GHCR build.
-- **[powershell-scripts-tui](https://github.com/dev-Blaze/powershell-scripts-tui)** — the original pure-PowerShell 7 TUI that became Scriptorium. Same idea, no Go.
+- **Ship containers properly** — multi-stage Dockerfiles, non-root users, `HEALTHCHECK`s, `depends_on: service_healthy`, migrations at container start, multi-arch (amd64/arm64) images on GHCR via buildx, and single static Go binaries with GoReleaser when a container is overkill.
+- **Release without ceremony** — scripted pipelines that lint, test, build, push, tag, and write release notes in one command. GitHub Actions for CI (`go test -race`, golangci-lint, Pester, PSScriptAnalyzer). `curl | bash` installers that double as updaters and verify checksums. Self-hosted browser-extension distribution with MDM force-install and an `updates.xml` feed.
+- **Keep the network closed** — WireGuard mesh instead of port forwards, tunnel-based ingress, DDNS, VPN-gated egress, OIDC in front of everything, RBAC with audit logs, TOTP.
+- **Handle secrets like they matter** — age-encrypted vaults unlocked by Touch ID or FIDO2, keys that never touch disk, redaction in logs and webhook payloads, `.env` files at mode 600, git sync that refuses to push plaintext.
+- **Make failure survivable** — restic backups to a NAS, config-as-code with diff-only commits, written restore runbooks, retry queues for outbound webhooks, per-job locks and timeouts, missed-run detection, `--dry-run` and resumable state on anything that changes the world.
+- **Watch the fleet** — host and container metrics, uptime probes, GPU agents, `/proc` CPU and RSS sampling per job, run history with sparklines, and every scheduled job reporting exit code, duration, and a log tail to a webhook.
+- **Glue the business together** — n8n workflows with AI agents that call MCP tools, then hand results to people over email. Microsoft Graph with app-only certificate auth, Exchange Online, Teams, SharePoint, Intune, JumpCloud, Google Workspace with domain-wide delegation, Google Vault, Shopify Admin GraphQL, Amazon SP-API, NetSuite SuiteQL over OAuth 2.0 M2M.
+- **Automate the tenant** — onboarding that creates the user, MFA, groups, device binding, and licence in one run. Offboarding that takes a Vault backup and verifies it before it removes anything. Mailbox, calendar, and transcript pipelines that run unattended and page only on non-zero exit.
+- **Build the tooling I wish existed** — terminal UIs in Go (Bubble Tea, Lip Gloss) and PowerShell 7, MCP and REST servers behind bearer tokens, systemd units, FastAPI apps with SQLAlchemy and Alembic, Android and Wear OS apps that talk to self-hosted automation, Chrome extensions that POST to webhooks.
 
-Smaller: [dropout-downloader](https://github.com/dev-Blaze/dropout-downloader) (Chromium extension), [rogers-monarch-converter](https://github.com/dev-Blaze/rogers-monarch-converter) (in-browser CSV converter that learns categories from your own export).
+## Toolbox
 
-## Automation I lean on
-
-n8n does the glue. A few flows that earn their keep:
-
-- **Amazon ↔ NetSuite reconciliation** — a form upload kicks off an AI agent that calls Scriptorium over MCP to run the reconciliation script, checks the result, and emails the workbook (or the failure) through Outlook.
-- **Run reporting** — every scheduled script POSTs exit code, duration, CPU/memory, and a log tail to a webhook. Failures get noticed. Successes get graphed.
-- **Voice to task** — Alfred sends speech to a webhook. An agent decides whether it's a task, a note, or a conversation, and replies over TTS.
-- **Invoices** — a Chrome extension turns any invoice page into a PDF and POSTs it to a header-authed webhook. Rolled out by MDM policy, updated from a self-hosted `updates.xml`.
-- **Backups of the backups** — a Python job pulls every workflow from every n8n instance and commits the diffs to git, because native source control is enterprise-only and a backup workflow inside n8n dies with the instance.
-
-## Day job
-
-IT systems and automation for a company that manufactures and sells online. Internal apps ship as containers (multi-stage builds, non-root, healthchecks, OIDC + RBAC + audit logs) through a scripted release pipeline: lint, tests, buildx multi-arch, GHCR push, tag, release notes. The rest is Microsoft 365 and Google Workspace automation in PowerShell and Python: app-only Graph auth, Exchange Online, Teams transcript pipelines, JumpCloud onboarding, and offboarding that takes a Vault backup before it removes a licence. Anything that changes state gets a `--dry-run` and resumable state.
+| | |
+| --- | --- |
+| Languages | Go, Python, PowerShell 7, Kotlin, TypeScript, Bash |
+| Platforms | Proxmox VE, TrueNAS SCALE, Ubuntu Server, Hetzner and RackNerd VPS, macOS |
+| Containers | Docker, Compose, buildx, GHCR, Watchtower, Portainer-style stack envs |
+| Network | WireGuard, NetBird, Pangolin/Newt, Cloudflare, Gluetun |
+| Identity | OIDC (Pocket ID, Authlib), RBAC, TOTP, FIDO2, age, Android Keystore |
+| Data | PostgreSQL, SQLite, Redis/Valkey, MariaDB, restic, S3/B2 |
+| Observability | Beszel, CheckCle, Uptime Kuma, webhook run reporting |
+| Automation | n8n, MCP, cron, systemd timers, Dagu, GitHub Actions, GoReleaser |
+| Microsoft 365 | Graph API, Exchange Online, Teams, SharePoint, Intune, JumpCloud |
+| Google | Workspace Admin, Vault, domain-wide delegation |
+| Commerce | Shopify Admin GraphQL, Amazon SP-API, NetSuite SuiteQL |
 
 ## Elsewhere
 

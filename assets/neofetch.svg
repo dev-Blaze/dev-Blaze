@@ -43,7 +43,7 @@
 <text x="330" y="254" class="in" style="animation-delay:0.55s"><tspan class="k">DE</tspan>: Docker Compose</text>
 <text x="330" y="272" class="in" style="animation-delay:0.60s"><tspan class="k">WM</tspan>: Pangolin + Newt (zero published ports)</text>
 <text x="330" y="290" class="in" style="animation-delay:0.65s"><tspan class="k">WM Theme</tspan>: Lucario</text>
-<text x="330" y="308" class="in" style="animation-delay:0.70s"><tspan class="k">Terminal</tspan>: Scriptorium, clavis</text>
+<text x="330" y="308" class="in" style="animation-delay:0.70s"><tspan class="k">Terminal</tspan>: Go TUIs (Bubble Tea)</text>
 <text x="330" y="326" class="in" style="animation-delay:0.75s"><tspan class="k">CPU</tspan>: Go, Python, PowerShell, Kotlin</text>
 <text x="330" y="344" class="in" style="animation-delay:0.80s"><tspan class="k">GPU</tspan>: n8n agents with MCP tools</text>
 <text x="330" y="362" class="in" style="animation-delay:0.85s"><tspan class="k">Memory</tspan>: restic to NAS nightly, n8n workflows to git</text>
