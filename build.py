@@ -13,7 +13,7 @@ CATEGORIES = [
     ("Networking", ["WireGuard", "NetBird", "Pangolin", "Newt", "Cloudflare DNS", "DDNS", "SMB/CIFS"]),
     ("Identity & security", ["OIDC", "SAML", "Pocket ID", "Authlib", "Entra ID", "JumpCloud", "SentinelOne", "RBAC", "audit logs", "MFA/TOTP", "FIDO2", "age", "Android Keystore"]),
     ("Backups & storage", ["restic", "Backrest", "S3", "Backblaze B2", "ZFS", "nightly DB dumps", "config-as-code", "restore runbooks"]),
-    ("Containers", ["Docker", "Compose", "buildx", "multi-arch", "GHCR", "Watchtower", "Portainer", "non-root images", "healthchecks"]),
+    ("Containers", ["Docker", "Compose", "buildx", "multi-arch", "Portainer", "healthchecks"]),
     ("Platforms", ["Proxmox VE", "TrueNAS SCALE", "Ubuntu Server", "Windows Server", "Hetzner", "RackNerd"]),
     ("Observability & alerting", ["Zabbix", "Beszel", "CheckCle", "Uptime Kuma", "/proc sampling", "webhook run notifications", "Gotify", "ntfy", "Slack", "SMTP"]),
     ("Automation & CI", ["n8n", "MCP", "cron", "systemd", "Dagu", "GitHub Actions", "GoReleaser", "Forgejo"]),

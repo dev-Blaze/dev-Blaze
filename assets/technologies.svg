@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="880" height="720" viewBox="0 0 880 720" role="img" aria-label="Technologies I know well">
-<clipPath id="c"><rect width="880" height="720" rx="8"/></clipPath><g clip-path="url(#c)">
-<rect width="880" height="720" fill="#2b3e50"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="701" viewBox="0 0 880 701" role="img" aria-label="Technologies I know well">
+<clipPath id="c"><rect width="880" height="701" rx="8"/></clipPath><g clip-path="url(#c)">
+<rect width="880" height="701" fill="#2b3e50"/>
 <rect y="0" width="5" height="60" fill="#d85740"/>
 <text x="20" y="25" font-family="SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" font-weight="700" fill="#d85740">Networking</text>
 <text x="264" y="25" font-family="SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" fill="#f8f8f2">WireGuard, NetBird, Pangolin, Newt, Cloudflare DNS, DDNS,</text>
@@ -15,45 +15,44 @@
 <text x="20" y="164" font-family="SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" font-weight="700" fill="#f4d858">Backups &amp; storage</text>
 <text x="264" y="164" font-family="SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" fill="#f8f8f2">restic, Backrest, S3, Backblaze B2, ZFS, nightly DB dumps,</text>
 <text x="264" y="183" font-family="SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" fill="#f8f8f2">config-as-code, restore runbooks</text>
-<rect y="199" width="880" height="60" fill="#30455a"/>
-<rect y="199" width="5" height="60" fill="#6a97c9"/>
+<rect y="199" width="880" height="41" fill="#30455a"/>
+<rect y="199" width="5" height="41" fill="#6a97c9"/>
 <text x="20" y="224" font-family="SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" font-weight="700" fill="#6a97c9">Containers</text>
-<text x="264" y="224" font-family="SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" fill="#f8f8f2">Docker, Compose, buildx, multi-arch, GHCR, Watchtower,</text>
-<text x="264" y="243" font-family="SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" fill="#f8f8f2">Portainer, non-root images, healthchecks</text>
-<rect y="259" width="5" height="60" fill="#c296f9"/>
-<text x="20" y="284" font-family="SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" font-weight="700" fill="#c296f9">Platforms</text>
-<text x="264" y="284" font-family="SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" fill="#f8f8f2">Proxmox VE, TrueNAS SCALE, Ubuntu Server, Windows Server,</text>
-<text x="264" y="303" font-family="SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" fill="#f8f8f2">Hetzner, RackNerd</text>
-<rect y="319" width="880" height="60" fill="#30455a"/>
-<rect y="319" width="5" height="60" fill="#9fdefa"/>
-<text x="20" y="344" font-family="SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" font-weight="700" fill="#9fdefa">Observability &amp; alerting</text>
-<text x="264" y="344" font-family="SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" fill="#f8f8f2">Zabbix, Beszel, CheckCle, Uptime Kuma, /proc sampling, webhook</text>
-<text x="264" y="363" font-family="SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" fill="#f8f8f2">run notifications, Gotify, ntfy, Slack, SMTP</text>
-<rect y="379" width="5" height="60" fill="#d85740"/>
-<text x="20" y="404" font-family="SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" font-weight="700" fill="#d85740">Automation &amp; CI</text>
-<text x="264" y="404" font-family="SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" fill="#f8f8f2">n8n, MCP, cron, systemd, Dagu, GitHub Actions, GoReleaser,</text>
-<text x="264" y="423" font-family="SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" fill="#f8f8f2">Forgejo</text>
-<rect y="439" width="880" height="60" fill="#30455a"/>
-<rect y="439" width="5" height="60" fill="#67af5e"/>
-<text x="20" y="464" font-family="SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" font-weight="700" fill="#67af5e">AI tooling</text>
-<text x="264" y="464" font-family="SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" fill="#f8f8f2">Claude Code, OpenCode, NanoClaw, n8n AI agents, MCP servers,</text>
-<text x="264" y="483" font-family="SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" fill="#f8f8f2">OpenRouter, Open WebUI</text>
-<rect y="499" width="5" height="41" fill="#f4d858"/>
-<text x="20" y="524" font-family="SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" font-weight="700" fill="#f4d858">Data</text>
-<text x="264" y="524" font-family="SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" fill="#f8f8f2">PostgreSQL, SQLite, Redis, Valkey, MariaDB, Alembic</text>
-<rect y="540" width="880" height="41" fill="#30455a"/>
-<rect y="540" width="5" height="41" fill="#6a97c9"/>
-<text x="20" y="565" font-family="SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" font-weight="700" fill="#6a97c9">Languages</text>
-<text x="264" y="565" font-family="SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" fill="#f8f8f2">Python, PowerShell 7, Bash, SQL</text>
-<rect y="581" width="5" height="60" fill="#c296f9"/>
-<text x="20" y="606" font-family="SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" font-weight="700" fill="#c296f9">Microsoft 365 &amp; Google</text>
-<text x="20" y="625" font-family="SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" font-weight="700" fill="#c296f9">Workspace</text>
-<text x="264" y="606" font-family="SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" fill="#f8f8f2">Graph API, Exchange Online, Teams, SharePoint, Intune,</text>
-<text x="264" y="625" font-family="SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" fill="#f8f8f2">Workspace Admin, Google Vault</text>
-<rect y="641" width="880" height="79" fill="#30455a"/>
-<rect y="641" width="5" height="79" fill="#9fdefa"/>
-<text x="20" y="666" font-family="SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" font-weight="700" fill="#9fdefa">Commerce &amp; ERP</text>
-<text x="264" y="666" font-family="SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" fill="#f8f8f2">Shopify Admin GraphQL, Shopify Admin REST, Shopify Storefront,</text>
-<text x="264" y="685" font-family="SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" fill="#f8f8f2">Amazon SP-API, Amazon MWS, Salesforce REST, Salesforce SOAP,</text>
-<text x="264" y="704" font-family="SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" fill="#f8f8f2">Salesforce Bulk, NetSuite SuiteQL, SuiteTalk REST</text>
+<text x="264" y="224" font-family="SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" fill="#f8f8f2">Docker, Compose, buildx, multi-arch, Portainer, healthchecks</text>
+<rect y="240" width="5" height="60" fill="#c296f9"/>
+<text x="20" y="265" font-family="SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" font-weight="700" fill="#c296f9">Platforms</text>
+<text x="264" y="265" font-family="SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" fill="#f8f8f2">Proxmox VE, TrueNAS SCALE, Ubuntu Server, Windows Server,</text>
+<text x="264" y="284" font-family="SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" fill="#f8f8f2">Hetzner, RackNerd</text>
+<rect y="300" width="880" height="60" fill="#30455a"/>
+<rect y="300" width="5" height="60" fill="#9fdefa"/>
+<text x="20" y="325" font-family="SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" font-weight="700" fill="#9fdefa">Observability &amp; alerting</text>
+<text x="264" y="325" font-family="SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" fill="#f8f8f2">Zabbix, Beszel, CheckCle, Uptime Kuma, /proc sampling, webhook</text>
+<text x="264" y="344" font-family="SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" fill="#f8f8f2">run notifications, Gotify, ntfy, Slack, SMTP</text>
+<rect y="360" width="5" height="60" fill="#d85740"/>
+<text x="20" y="385" font-family="SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" font-weight="700" fill="#d85740">Automation &amp; CI</text>
+<text x="264" y="385" font-family="SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" fill="#f8f8f2">n8n, MCP, cron, systemd, Dagu, GitHub Actions, GoReleaser,</text>
+<text x="264" y="404" font-family="SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" fill="#f8f8f2">Forgejo</text>
+<rect y="420" width="880" height="60" fill="#30455a"/>
+<rect y="420" width="5" height="60" fill="#67af5e"/>
+<text x="20" y="445" font-family="SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" font-weight="700" fill="#67af5e">AI tooling</text>
+<text x="264" y="445" font-family="SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" fill="#f8f8f2">Claude Code, OpenCode, NanoClaw, n8n AI agents, MCP servers,</text>
+<text x="264" y="464" font-family="SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" fill="#f8f8f2">OpenRouter, Open WebUI</text>
+<rect y="480" width="5" height="41" fill="#f4d858"/>
+<text x="20" y="505" font-family="SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" font-weight="700" fill="#f4d858">Data</text>
+<text x="264" y="505" font-family="SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" fill="#f8f8f2">PostgreSQL, SQLite, Redis, Valkey, MariaDB, Alembic</text>
+<rect y="521" width="880" height="41" fill="#30455a"/>
+<rect y="521" width="5" height="41" fill="#6a97c9"/>
+<text x="20" y="546" font-family="SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" font-weight="700" fill="#6a97c9">Languages</text>
+<text x="264" y="546" font-family="SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" fill="#f8f8f2">Python, PowerShell 7, Bash, SQL</text>
+<rect y="562" width="5" height="60" fill="#c296f9"/>
+<text x="20" y="587" font-family="SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" font-weight="700" fill="#c296f9">Microsoft 365 &amp; Google</text>
+<text x="20" y="606" font-family="SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" font-weight="700" fill="#c296f9">Workspace</text>
+<text x="264" y="587" font-family="SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" fill="#f8f8f2">Graph API, Exchange Online, Teams, SharePoint, Intune,</text>
+<text x="264" y="606" font-family="SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" fill="#f8f8f2">Workspace Admin, Google Vault</text>
+<rect y="622" width="880" height="79" fill="#30455a"/>
+<rect y="622" width="5" height="79" fill="#9fdefa"/>
+<text x="20" y="647" font-family="SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" font-weight="700" fill="#9fdefa">Commerce &amp; ERP</text>
+<text x="264" y="647" font-family="SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" fill="#f8f8f2">Shopify Admin GraphQL, Shopify Admin REST, Shopify Storefront,</text>
+<text x="264" y="666" font-family="SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" fill="#f8f8f2">Amazon SP-API, Amazon MWS, Salesforce REST, Salesforce SOAP,</text>
+<text x="264" y="685" font-family="SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" fill="#f8f8f2">Salesforce Bulk, NetSuite SuiteQL, SuiteTalk REST</text>
 </g></svg>
