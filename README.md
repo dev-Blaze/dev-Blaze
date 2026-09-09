@@ -4,23 +4,23 @@
 
 I'm Blaze. I keep systems boring on purpose: backups that actually restore, deploys nobody has to babysit, and dashboards that are green because nothing is on fire, not because nobody is looking.
 
-## What I run
+## Technologies I know well
 
-Two sites plus a VPS, joined by a WireGuard mesh, with nothing listening on a public port. Everything is declarative Docker Compose, one directory per stack, prefixed by host, versioned in git.
-
-| Concern | How it's handled |
+| | |
 | --- | --- |
-| Ingress | Pangolin + Newt tunnels. Services attach to the tunnel network instead of publishing ports. Cloudflare DDNS covers the rest. |
-| Network | NetBird (WireGuard) mesh between home, the VPS, and work sites. Gluetun VPN-gates the download stack. |
-| Identity | Pocket ID as the OIDC provider. One login for every app that supports it. |
-| Observability | Beszel hub + agents (including a GPU agent), CheckCle, Uptime Kuma. |
-| Backups | Backrest (restic) to a NAS over SMB. Automation workflows exported to git nightly, with a written restore runbook. |
-| Updates | Watchtower per host on a 02:00 cron, email on change. |
-| Scheduling | Dagu for DAG jobs. A self-built script runner for cron with locks, timeouts, and missed-run detection. |
-| Automation | Four n8n instances (two personal, two work) running AI agents that call MCP tools. |
-| Apps | Immich, Paperless-ngx, Jellyfin + the \*arr stack, Vaultwarden, Outline, Forgejo, Open WebUI, Mealie, Audiobookshelf, and a few game servers. |
-
-Hypervisor is Proxmox VE with TrueNAS SCALE and Ubuntu Server guests.
+| Networking | WireGuard, NetBird mesh, Pangolin + Newt (reverse proxy and tunnels, zero published ports), Cloudflare DNS and DDNS, Gluetun, SMB/CIFS |
+| Identity & access | OIDC, SAML, Pocket ID, Authlib, Microsoft Entra ID, JumpCloud, RBAC with audit logs, MFA/TOTP, FIDO2, age encryption, Android Keystore |
+| Backups & storage | restic, Backrest, S3 and Backblaze B2, ZFS on TrueNAS, nightly database dumps, config-as-code in git, written restore runbooks |
+| Containers | Docker, Compose, buildx multi-arch, GHCR, Watchtower, Portainer-style stack envs, non-root images with healthchecks |
+| Platforms | Proxmox VE, TrueNAS SCALE, Ubuntu Server, Hetzner and RackNerd VPS, macOS, Windows with Intune |
+| Observability | Beszel, CheckCle, Uptime Kuma, `/proc` resource sampling, webhook run reporting, Slack and SMTP alerting |
+| Automation & CI | n8n, MCP, cron, systemd, Dagu, GitHub Actions, GoReleaser, Forgejo |
+| AI tooling | n8n AI agents, MCP servers and tools, OpenRouter, Open WebUI |
+| Data | PostgreSQL, SQLite, Redis/Valkey, MariaDB, Alembic migrations |
+| Languages | Go, Python, PowerShell 7, Kotlin, TypeScript, Bash, SQL |
+| Microsoft 365 | Graph API (app-only auth), Exchange Online, Teams, SharePoint, Intune |
+| Google | Workspace Admin, Vault, domain-wide delegation |
+| Commerce & ERP | Shopify Admin GraphQL, Amazon SP-API, NetSuite SuiteQL |
 
 ## What I do
 
@@ -33,22 +33,6 @@ Hypervisor is Proxmox VE with TrueNAS SCALE and Ubuntu Server guests.
 - **Glue the business together** — n8n workflows with AI agents that call MCP tools, then hand results to people over email. Microsoft Graph with app-only certificate auth, Exchange Online, Teams, SharePoint, Intune, JumpCloud, Google Workspace with domain-wide delegation, Google Vault, Shopify Admin GraphQL, Amazon SP-API, NetSuite SuiteQL over OAuth 2.0 M2M.
 - **Automate the tenant** — onboarding that creates the user, MFA, groups, device binding, and licence in one run. Offboarding that takes a Vault backup and verifies it before it removes anything. Mailbox, calendar, and transcript pipelines that run unattended and page only on non-zero exit.
 - **Build the tooling I wish existed** — terminal UIs in Go (Bubble Tea, Lip Gloss) and PowerShell 7, MCP and REST servers behind bearer tokens, systemd units, FastAPI apps with SQLAlchemy and Alembic, Android and Wear OS apps that talk to self-hosted automation, Chrome extensions that POST to webhooks.
-
-## Toolbox
-
-| | |
-| --- | --- |
-| Languages | Go, Python, PowerShell 7, Kotlin, TypeScript, Bash |
-| Platforms | Proxmox VE, TrueNAS SCALE, Ubuntu Server, Hetzner and RackNerd VPS, macOS |
-| Containers | Docker, Compose, buildx, GHCR, Watchtower, Portainer-style stack envs |
-| Network | WireGuard, NetBird, Pangolin/Newt, Cloudflare, Gluetun |
-| Identity | OIDC (Pocket ID, Authlib), RBAC, TOTP, FIDO2, age, Android Keystore |
-| Data | PostgreSQL, SQLite, Redis/Valkey, MariaDB, restic, S3/B2 |
-| Observability | Beszel, CheckCle, Uptime Kuma, webhook run reporting |
-| Automation | n8n, MCP, cron, systemd timers, Dagu, GitHub Actions, GoReleaser |
-| Microsoft 365 | Graph API, Exchange Online, Teams, SharePoint, Intune, JumpCloud |
-| Google | Workspace Admin, Vault, domain-wide delegation |
-| Commerce | Shopify Admin GraphQL, Amazon SP-API, NetSuite SuiteQL |
 
 ## Elsewhere
 
