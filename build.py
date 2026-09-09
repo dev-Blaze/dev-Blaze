@@ -74,4 +74,11 @@ def title():
 (ASSETS / "technologies.svg").write_text(table())
 for key, text, color in HEADINGS:
     (ASSETS / f"h-{key}.svg").write_text(heading(text, color))
-print("wrote title, technologies table, headings")
+# stamp each README image src with a content hash so GitHub's image cache refetches after a change
+import hashlib
+readme = Path("README.md").read_text()
+for svg in ASSETS.glob("*.svg"):
+    v = hashlib.md5(svg.read_bytes()).hexdigest()[:8]
+    readme = re.sub(rf'src="assets/{svg.name}(\?v=[0-9a-f]+)?"', f'src="assets/{svg.name}?v={v}"', readme)
+Path("README.md").write_text(readme)
+print("wrote title, technologies table, headings; README image versions stamped")
