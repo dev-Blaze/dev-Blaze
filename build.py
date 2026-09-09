@@ -63,11 +63,11 @@ def heading(text, color):
 def title():
     w, h = 880, 96
     strip = "".join(f'<rect x="{i*110}" y="{h-6}" width="110" height="6" fill="{c}"/>' for i, c in enumerate([DARK] + PALETTE + [INK]))
-    return (f'<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}" viewBox="0 0 {w} {h}" role="img" aria-label="dev-Blaze, DevOps / SRE / IT systems">'
+    return (f'<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}" viewBox="0 0 {w} {h}" role="img" aria-label="dev-Blaze, DevOps / SRE / IT operations">'
             f'<clipPath id="c"><rect width="{w}" height="{h}" rx="8"/></clipPath>'
             f'<rect width="{w}" height="{h}" rx="8" fill="{NAVY}"/>'
             f'<text x="28" y="44" font-family="{FONT}" font-size="26" font-weight="700" fill="{PALETTE[1]}">dev-Blaze</text>'
-            f'<text x="28" y="72" font-family="{FONT}" font-size="14" fill="{MUTED}">DevOps / SRE / IT systems</text>'
+            f'<text x="28" y="72" font-family="{FONT}" font-size="14" fill="{MUTED}">DevOps / SRE / IT operations</text>'
             f'<g clip-path="url(#c)">{strip}</g></svg>')
 
 # write each SVG as <name>.<content-hash>.svg (GitHub's image caches ignore query strings,

@@ -1,4 +1,4 @@
-<img src="assets/title.f67aec33.svg" width="880" alt="dev-Blaze, DevOps / SRE / IT systems">
+<img src="assets/title.29635fa0.svg" width="880" alt="dev-Blaze, DevOps / SRE / IT systems">
 
 I'm Blaze. I keep systems boring on purpose: backups that actually restore, deploys nobody has to babysit, and dashboards that are green because nothing is on fire, not because nobody is looking.
 
