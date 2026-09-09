@@ -10,7 +10,7 @@ FONT = "SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace"
 ASSETS = Path("assets")
 
 CATEGORIES = [
-    ("Networking", ["WireGuard", "NetBird", "Pangolin", "Newt", "Cloudflare DNS", "DDNS", "SMB/CIFS"]),
+    ("Networking", ["WireGuard", "NetBird", "Pangolin", "Cloudflare", "UniFi", "Meraki", "Sophos", "Fortinet", "OPNsense/pfSense"]),
     ("Identity & security", ["OIDC", "SAML", "Pocket ID", "Authlib", "Entra ID", "JumpCloud", "SentinelOne", "RBAC", "audit logs", "MFA/TOTP", "FIDO2", "age", "Android Keystore"]),
     ("Backups & storage", ["restic", "Backrest", "S3", "Backblaze B2", "ZFS", "nightly DB dumps", "config-as-code", "restore runbooks"]),
     ("Containers", ["Docker", "Compose", "buildx", "multi-arch", "Portainer", "healthchecks"]),

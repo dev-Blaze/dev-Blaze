@@ -3,8 +3,8 @@
 <rect width="880" height="701" fill="#2b3e50"/>
 <rect y="0" width="5" height="60" fill="#d85740"/>
 <text x="20" y="25" font-family="SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" font-weight="700" fill="#d85740">Networking</text>
-<text x="264" y="25" font-family="SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" fill="#f8f8f2">WireGuard, NetBird, Pangolin, Newt, Cloudflare DNS, DDNS,</text>
-<text x="264" y="44" font-family="SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" fill="#f8f8f2">SMB/CIFS</text>
+<text x="264" y="25" font-family="SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" fill="#f8f8f2">WireGuard, NetBird, Pangolin, Cloudflare, UniFi, Meraki,</text>
+<text x="264" y="44" font-family="SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" fill="#f8f8f2">Sophos, Fortinet, OPNsense/pfSense</text>
 <rect y="60" width="880" height="79" fill="#30455a"/>
 <rect y="60" width="5" height="79" fill="#67af5e"/>
 <text x="20" y="85" font-family="SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" font-weight="700" fill="#67af5e">Identity &amp; security</text>
