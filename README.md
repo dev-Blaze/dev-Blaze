@@ -32,8 +32,3 @@ I'm Blaze. I keep systems boring on purpose: backups that actually restore, depl
 - **Glue the business together** — n8n workflows with AI agents that call MCP tools, then hand results to people over email. Microsoft Graph with app-only certificate auth, Exchange Online, Teams, SharePoint, Intune, JumpCloud, Google Workspace with domain-wide delegation, Google Vault, Shopify Admin GraphQL, Amazon SP-API, NetSuite SuiteQL over OAuth 2.0 M2M.
 - **Automate the tenant** — onboarding that creates the user, MFA, groups, device binding, and licence in one run. Offboarding that takes a Vault backup and verifies it before it removes anything. Mailbox, calendar, and transcript pipelines that run unattended and page only on non-zero exit.
 - **Build the tooling I wish existed** — terminal UIs in Go (Bubble Tea, Lip Gloss) and PowerShell 7, MCP and REST servers behind bearer tokens, systemd units, FastAPI apps with SQLAlchemy and Alembic, Android and Wear OS apps that talk to self-hosted automation, Chrome extensions that POST to webhooks.
-
-## Elsewhere
-
-GitHub is the best place to find me.
-<!-- add a site, email, or LinkedIn here -->
