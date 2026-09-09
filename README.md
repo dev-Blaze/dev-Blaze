@@ -8,7 +8,7 @@ I'm Blaze. I keep systems boring on purpose: backups that actually restore, depl
 
 | | |
 | --- | --- |
-| Networking | WireGuard, NetBird mesh, Pangolin + Newt (reverse proxy and tunnels, zero published ports), Cloudflare DNS and DDNS, Gluetun, SMB/CIFS |
+| Networking | WireGuard, NetBird mesh, Pangolin + Newt (reverse proxy and tunnels, zero published ports), Cloudflare DNS and DDNS, SMB/CIFS |
 | Identity & access | OIDC, SAML, Pocket ID, Authlib, Microsoft Entra ID, JumpCloud, RBAC with audit logs, MFA/TOTP, FIDO2, age encryption, Android Keystore |
 | Backups & storage | restic, Backrest, S3 and Backblaze B2, ZFS on TrueNAS, nightly database dumps, config-as-code in git, written restore runbooks |
 | Containers | Docker, Compose, buildx multi-arch, GHCR, Watchtower, Portainer-style stack envs, non-root images with healthchecks |
