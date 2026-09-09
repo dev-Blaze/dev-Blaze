@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="470" viewBox="0 0 880 470" role="img" aria-label="neofetch-style profile card for dev-Blaze">
+<style>
+  text { font-family: SFMono-Regular, Menlo, Consolas, 'Liberation Mono', 'DejaVu Sans Mono', monospace; font-size: 13px; fill: #f8f8f2; white-space: pre; }
+  .k { fill: #f4d858; }
+  .m { fill: #8a9bb0; }
+  .cur { animation: blink 1.1s steps(1) infinite; }
+  .in { opacity: 0; animation: reveal .25s ease-out forwards; }
+  @keyframes blink { 50% { opacity: 0; } }
+  @keyframes reveal { to { opacity: 1; } }
+  @media (prefers-reduced-motion: reduce) { .in { opacity: 1; animation: none; } .cur { animation: none; } }
+</style>
+<rect x="0.5" y="0.5" width="879" height="469" rx="12" fill="#2b3e50" stroke="#1c2a37"/>
+<path d="M12.5 0.5h855a12 12 0 0 1 12 12v27.5H0.5V12.5a12 12 0 0 1 12-12z" fill="#233444"/>
+<circle cx="22" cy="20" r="6" fill="#ff5f57"/>
+<circle cx="42" cy="20" r="6" fill="#febc2e"/>
+<circle cx="62" cy="20" r="6" fill="#28c840"/>
+<text x="440.0" y="24" text-anchor="middle" class="m">dev-Blaze — zsh — 110×36</text>
+<text x="44" y="64"><tspan fill="#67af5e">~</tspan> <tspan fill="#c296f9">❯</tspan> neofetch</text>
+<text x="44" y="92" class="in" style="fill:#67af5e;animation-delay:0.05s">             .</text>
+<text x="44" y="110" class="in" style="fill:#67af5e;animation-delay:0.09s">            'c.</text>
+<text x="44" y="128" class="in" style="fill:#67af5e;animation-delay:0.13s">           ,xM.</text>
+<text x="44" y="146" class="in" style="fill:#f4d858;animation-delay:0.17s">           OMMM:</text>
+<text x="44" y="164" class="in" style="fill:#f4d858;animation-delay:0.21s">          dMMMMk</text>
+<text x="44" y="182" class="in" style="fill:#f4d858;animation-delay:0.25s">     .   dMMMMMMo   .</text>
+<text x="44" y="200" class="in" style="fill:#d85740;animation-delay:0.29s">    ;M; xMMMMMMMMk ;M;</text>
+<text x="44" y="218" class="in" style="fill:#d85740;animation-delay:0.33s">   cMMMdMMMMMMMMMMkMMMc</text>
+<text x="44" y="236" class="in" style="fill:#d85740;animation-delay:0.37s">   XMMMMMMMMMMMMMMMMMMX</text>
+<text x="44" y="254" class="in" style="fill:#c296f9;animation-delay:0.41s">   MMMMMMMMMMMMMMMMMMMM.</text>
+<text x="44" y="272" class="in" style="fill:#c296f9;animation-delay:0.45s">   .KMMMMMMMMMMMMMMMMWd</text>
+<text x="44" y="290" class="in" style="fill:#6a97c9;animation-delay:0.49s">    .XMMMMMMMMMMMMMMMMk</text>
+<text x="44" y="308" class="in" style="fill:#6a97c9;animation-delay:0.53s">      kMMMMMMMMMMMMMMd</text>
+<text x="44" y="326" class="in" style="fill:#9fdefa;animation-delay:0.57s">       ;KMMMMMMMMMWk.</text>
+<text x="44" y="344" class="in" style="fill:#9fdefa;animation-delay:0.61s">        .cooc,.coo:.</text>
+<text x="330" y="92" class="in" style="animation-delay:.1s"><tspan fill="#67af5e">dev-Blaze</tspan>@<tspan fill="#67af5e">homelab</tspan></text>
+<text x="330" y="110" class="in m" style="animation-delay:.15s">-----------------</text>
+<text x="330" y="128" class="in" style="animation-delay:0.20s"><tspan class="k">OS</tspan>: Proxmox VE, TrueNAS SCALE, Ubuntu Server</text>
+<text x="330" y="146" class="in" style="animation-delay:0.25s"><tspan class="k">Host</tspan>: home rack + cloud VPS</text>
+<text x="330" y="164" class="in" style="animation-delay:0.30s"><tspan class="k">Kernel</tspan>: DevOps / SRE / IT systems</text>
+<text x="330" y="182" class="in" style="animation-delay:0.35s"><tspan class="k">Uptime</tspan>: measured in cron runs, not days</text>
+<text x="330" y="200" class="in" style="animation-delay:0.40s"><tspan class="k">Packages</tspan>: 80+ (docker compose)</text>
+<text x="330" y="218" class="in" style="animation-delay:0.45s"><tspan class="k">Shell</tspan>: zsh 5.9, pwsh 7</text>
+<text x="330" y="236" class="in" style="animation-delay:0.50s"><tspan class="k">Resolution</tspan>: 2 sites + cloud, 1 WireGuard mesh</text>
+<text x="330" y="254" class="in" style="animation-delay:0.55s"><tspan class="k">DE</tspan>: Docker Compose</text>
+<text x="330" y="272" class="in" style="animation-delay:0.60s"><tspan class="k">WM</tspan>: Pangolin + Newt (zero published ports)</text>
+<text x="330" y="290" class="in" style="animation-delay:0.65s"><tspan class="k">WM Theme</tspan>: Lucario</text>
+<text x="330" y="308" class="in" style="animation-delay:0.70s"><tspan class="k">Terminal</tspan>: Scriptorium, clavis</text>
+<text x="330" y="326" class="in" style="animation-delay:0.75s"><tspan class="k">CPU</tspan>: Go, Python, PowerShell, Kotlin</text>
+<text x="330" y="344" class="in" style="animation-delay:0.80s"><tspan class="k">GPU</tspan>: n8n agents with MCP tools</text>
+<text x="330" y="362" class="in" style="animation-delay:0.85s"><tspan class="k">Memory</tspan>: restic to NAS nightly, n8n workflows to git</text>
+<rect x="330" y="390" width="42" height="24" fill="#252d38" class="in" style="animation-delay:1.00s"/>
+<rect x="372" y="390" width="42" height="24" fill="#d85740" class="in" style="animation-delay:1.05s"/>
+<rect x="414" y="390" width="42" height="24" fill="#67af5e" class="in" style="animation-delay:1.10s"/>
+<rect x="456" y="390" width="42" height="24" fill="#f4d858" class="in" style="animation-delay:1.15s"/>
+<rect x="498" y="390" width="42" height="24" fill="#6a97c9" class="in" style="animation-delay:1.20s"/>
+<rect x="540" y="390" width="42" height="24" fill="#c296f9" class="in" style="animation-delay:1.25s"/>
+<rect x="582" y="390" width="42" height="24" fill="#9fdefa" class="in" style="animation-delay:1.30s"/>
+<rect x="624" y="390" width="42" height="24" fill="#f8f8f2" class="in" style="animation-delay:1.35s"/>
+<text x="44" y="442" class="in" style="animation-delay:1.5s"><tspan fill="#67af5e">~</tspan> <tspan fill="#c296f9">❯</tspan> <tspan class="cur">▍</tspan></text>
+</svg>
