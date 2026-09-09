@@ -15,7 +15,7 @@ I'm Blaze. I keep systems boring on purpose: backups that actually restore, depl
 | Platforms | Proxmox VE, TrueNAS SCALE, Ubuntu Server, Windows Server, Hetzner and RackNerd VPS |
 | Observability & alerting | Zabbix, Beszel, CheckCle, Uptime Kuma, `/proc` resource sampling, webhook run notifications, Gotify, ntfy, Slack and SMTP alerting |
 | Automation & CI | n8n, MCP, cron, systemd, Dagu, GitHub Actions, GoReleaser, Forgejo |
-| AI tooling | n8n AI agents, MCP servers and tools, OpenRouter, Open WebUI |
+| AI tooling | Claude Code, OpenCode, NanoClaw (agent harness), n8n AI agents, MCP servers and tools, OpenRouter, Open WebUI |
 | Data | PostgreSQL, SQLite, Redis/Valkey, MariaDB, Alembic migrations |
 | Languages | Go, Python, PowerShell 7, Kotlin, TypeScript, Bash, SQL |
 | Microsoft 365 | Graph API (app-only auth), Exchange Online, Teams, SharePoint, Intune |
