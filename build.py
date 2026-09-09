@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
-"""Generate the Lucario-coloured SVG headings and tags used by README.md, then rewrite the tag lines in README.md."""
-import re
+"""Generate the Lucario-coloured SVGs used by README.md: title, headings, and the technologies table."""
+import re, textwrap
 from pathlib import Path
 from xml.sax.saxutils import escape
 
 NAVY, INK, MUTED, DARK = "#2b3e50", "#f8f8f2", "#8a9bb0", "#252d38"
 PALETTE = ["#d85740", "#67af5e", "#f4d858", "#6a97c9", "#c296f9", "#9fdefa"]  # red green yellow blue magenta cyan
 FONT = "SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace"
-ASSETS = Path("assets"); TAGS = ASSETS / "tags"
+ASSETS = Path("assets")
 
 CATEGORIES = [
     ("Networking", ["WireGuard", "NetBird", "Pangolin", "Newt", "Cloudflare DNS", "DDNS", "SMB/CIFS"]),
@@ -23,17 +23,35 @@ CATEGORIES = [
     ("Microsoft 365 & Google Workspace", ["Graph API", "Exchange Online", "Teams", "SharePoint", "Intune", "Workspace Admin", "Google Vault"]),
     ("Commerce & ERP", ["Shopify Admin GraphQL", "Shopify Admin REST", "Shopify Storefront", "Amazon SP-API", "Amazon MWS", "Salesforce REST", "Salesforce SOAP", "Salesforce Bulk", "NetSuite SuiteQL", "SuiteTalk REST"]),
 ]
-HEADINGS = [("technologies", "Technologies I know well", PALETTE[1]), ("what-i-do", "What I do", PALETTE[3])]
+HEADINGS = [("what-i-do", "What I do", PALETTE[1]), ("technologies", "Technologies I know well", PALETTE[3])]
 
 def slug(s): return re.sub(r"[^a-z0-9]+", "-", s.lower()).strip("-")
 
-def tag(text, fg, bg, bold=False):
-    fs, cw, pad, h = 12, 7.3, 9, 22
-    tw = round(len(text) * cw, 1); w = round(tw + pad * 2)
-    weight = ' font-weight="700"' if bold else ""
-    return (f'<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}" viewBox="0 0 {w} {h}" role="img" aria-label="{escape(text)}">'
-            f'<rect width="{w}" height="{h}" rx="4" fill="{bg}"/>'
-            f'<text x="{pad}" y="15.5" font-family="{FONT}" font-size="{fs}"{weight} fill="{fg}" textLength="{tw}" lengthAdjust="spacingAndGlyphs">{escape(text)}</text></svg>')
+def table():
+    w, pad, cat_w, lh, rp = 880, 20, 244, 19, 11
+    fs, cw = 13, 9.2                      # worst-case monospace glyph width (0.7em) so wrapped lines fit in any renderer
+    cat_wrap = int((cat_w - pad) / cw)    # 28 chars
+    tech_wrap = int((w - pad - cat_w - pad) / cw) - 2   # 72 chars
+    rows, y = [], 0
+    for i, (cat, techs) in enumerate(CATEGORIES):
+        cl = textwrap.wrap(cat, cat_wrap); tl = textwrap.wrap(", ".join(techs), tech_wrap)
+        rh = rp * 2 + lh * max(len(cl), len(tl))
+        rows.append((cl, tl, PALETTE[i % len(PALETTE)], y, rh)); y += rh
+    h = y
+    out = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}" viewBox="0 0 {w} {h}" role="img" aria-label="Technologies I know well">',
+           f'<clipPath id="c"><rect width="{w}" height="{h}" rx="8"/></clipPath><g clip-path="url(#c)">',
+           f'<rect width="{w}" height="{h}" fill="{NAVY}"/>']
+    def text(x, y, line, fill, bold=False):
+        weight = ' font-weight="700"' if bold else ""
+        return f'<text x="{x}" y="{y}" font-family="{FONT}" font-size="{fs}"{weight} fill="{fill}">{escape(line)}</text>'
+    for i, (cl, tl, color, y0, rh) in enumerate(rows):
+        if i % 2: out.append(f'<rect y="{y0}" width="{w}" height="{rh}" fill="#30455a"/>')
+        out.append(f'<rect y="{y0}" width="5" height="{rh}" fill="{color}"/>')
+        ty = y0 + rp + 14
+        out += [text(pad, ty + j * lh, line, color, bold=True) for j, line in enumerate(cl)]
+        out += [text(pad + cat_w, ty + j * lh, line, INK) for j, line in enumerate(tl)]
+    out.append('</g></svg>')
+    return "\n".join(out)
 
 def heading(text, color):
     fs, cw, h = 20, 12.1, 34
@@ -48,27 +66,12 @@ def title():
     return (f'<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}" viewBox="0 0 {w} {h}" role="img" aria-label="dev-Blaze, DevOps / SRE / IT systems">'
             f'<clipPath id="c"><rect width="{w}" height="{h}" rx="8"/></clipPath>'
             f'<rect width="{w}" height="{h}" rx="8" fill="{NAVY}"/>'
-            f'<text x="28" y="44" font-family="{FONT}" font-size="26" font-weight="700" fill="{PALETTE[1]}">dev-Blaze<tspan fill="{INK}">@</tspan><tspan fill="{PALETTE[1]}">homelab</tspan></text>'
+            f'<text x="28" y="44" font-family="{FONT}" font-size="26" font-weight="700" fill="{PALETTE[1]}">dev-Blaze</text>'
             f'<text x="28" y="72" font-family="{FONT}" font-size="14" fill="{MUTED}">DevOps / SRE / IT systems</text>'
             f'<g clip-path="url(#c)">{strip}</g></svg>')
 
-TAGS.mkdir(parents=True, exist_ok=True)
 (ASSETS / "title.svg").write_text(title())
+(ASSETS / "technologies.svg").write_text(table())
 for key, text, color in HEADINGS:
     (ASSETS / f"h-{key}.svg").write_text(heading(text, color))
-
-lines = []
-for i, (cat, techs) in enumerate(CATEGORIES):
-    color = PALETTE[i % len(PALETTE)]
-    (TAGS / f"cat-{slug(cat)}.svg").write_text(tag(cat, DARK, color, bold=True))
-    imgs = [f'<img src="assets/tags/cat-{slug(cat)}.svg" alt="{escape(cat)}:">']
-    for t in techs:
-        (TAGS / f"{slug(t)}.svg").write_text(tag(t, color, NAVY))
-        imgs.append(f'<img src="assets/tags/{slug(t)}.svg" alt="{escape(t)}">')
-    lines.append(" ".join(imgs))
-block = "\n\n".join(lines)
-
-readme = Path("README.md").read_text()
-readme = re.sub(r"<!-- tags:start -->.*<!-- tags:end -->", f"<!-- tags:start -->\n{block}\n<!-- tags:end -->", readme, flags=re.S)
-Path("README.md").write_text(readme)
-print(f"wrote {len(list(TAGS.iterdir()))} tags, {len(HEADINGS)} headings, title")
+print("wrote title, technologies table, headings")
