@@ -70,15 +70,16 @@ def title():
             f'<text x="28" y="72" font-family="{FONT}" font-size="14" fill="{MUTED}">DevOps / SRE / IT systems</text>'
             f'<g clip-path="url(#c)">{strip}</g></svg>')
 
-(ASSETS / "title.svg").write_text(title())
-(ASSETS / "technologies.svg").write_text(table())
-for key, text, color in HEADINGS:
-    (ASSETS / f"h-{key}.svg").write_text(heading(text, color))
-# stamp each README image src with a content hash so GitHub's image cache refetches after a change
+# write each SVG as <name>.<content-hash>.svg (GitHub's image caches ignore query strings,
+# so a changed file needs a new filename), drop stale versions, and point README.md at the new names
 import hashlib
 readme = Path("README.md").read_text()
-for svg in ASSETS.glob("*.svg"):
-    v = hashlib.md5(svg.read_bytes()).hexdigest()[:8]
-    readme = re.sub(rf'src="assets/{svg.name}(\?v=[0-9a-f]+)?"', f'src="assets/{svg.name}?v={v}"', readme)
+outputs = {"title": title(), "technologies": table(), **{f"h-{k}": heading(t, c) for k, t, c in HEADINGS}}
+for name, svg in outputs.items():
+    v = hashlib.md5(svg.encode()).hexdigest()[:8]
+    for old in ASSETS.glob(f"{name}.*.svg"):
+        if old.name != f"{name}.{v}.svg": old.unlink()
+    (ASSETS / f"{name}.{v}.svg").write_text(svg)
+    readme = re.sub(rf'src="assets/{name}(\.[0-9a-f]{{8}})?\.svg(\?v=[0-9a-f]+)?"', f'src="assets/{name}.{v}.svg"', readme)
 Path("README.md").write_text(readme)
-print("wrote title, technologies table, headings; README image versions stamped")
+print("wrote", ", ".join(sorted(x.name for x in ASSETS.glob("*.svg"))))
